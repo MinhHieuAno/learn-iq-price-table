@@ -632,14 +632,13 @@
                     accent: "text-green-700",
                 },
                 {
-                    name: "Teacher Basic",
+                    name: "Teacher Basic (Free)",
                     type: "Giáo viên cá nhân",
-                    price: { monthly: 0, yearly: 0 }, // Free forever, nhưng quota giới hạn
-                    quota: "30 đề thi/tháng",
+                    price: { monthly: 0, yearly: 0 },
+                    quota: "30 đề thi/tháng (sau trial)",
                     overage: "10,000 VND/bài kiểm tra",
                     onboarding: "-",
                     features: [
-                        "Miễn phí vĩnh viễn với quota giới hạn",
                         "Tạo bài giảng, slide, đề thi",
                         "Chấm điểm trắc nghiệm tự động",
                         "Quản lý lớp học cơ bản",
@@ -647,7 +646,7 @@
                     limitations: [
                         "Không chấm tự luận AI nâng cao",
                         "Không tạo trợ giảng ảo bản sao",
-                        "Quota 30 đề thi/tháng",
+                        "Quota 30 đề/tháng",
                     ],
                     color: "from-orange-50 to-orange-100",
                     border: "border-orange-200",
@@ -673,6 +672,7 @@
                     border: "border-red-200",
                     accent: "text-red-700",
                     popular: true,
+                    trial: "3 tháng dùng thử miễn phí", // trial Teacher Pro cho giáo viên mới
                 },
                 {
                     name: "School Starter",
