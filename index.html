@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bảng Giá Dịch Vụ</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            /* Custom styles for the toggle switch */
+            .toggle-checkbox:checked {
+                right: 0;
+                border-color: #4f46e5;
+            }
+            .toggle-checkbox:checked + .toggle-label {
+                background-color: #4f46e5;
+            }
+            /* Style for highlighted plan */
+            .highlight-plan {
+                transform: scale(1.05);
+                border: 2px solid #4f46e5;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50">
+        <div class="container mx-auto px-4 py-12 sm:py-20">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto">
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-5 tracking-tight"
+                >
+                    Learn IQ
+                </h1>
+                <p class="text-slate-500">
+                    Hệ thống học tập trực tuyến thông minh
+                </p>
+                <p class="mt-4 text-lg text-gray-600">
+                    Chọn gói phù hợp nhất với nhu cầu học tập và giảng dạy của
+                    bạn. Tiết kiệm 15% với gói thanh toán theo năm.
+                </p>
+            </div>
+
+            <!-- Toggle Switch for Monthly/Yearly Pricing -->
+            <div class="flex items-center justify-center mt-10 space-x-4">
+                <span
+                    class="text-lg font-medium text-gray-700"
+                    id="monthly-label"
+                    >Tháng</span
+                >
+                <div
+                    class="relative inline-block w-14 align-middle select-none transition duration-200 ease-in"
+                >
+                    <input
+                        type="checkbox"
+                        name="toggle"
+                        id="pricing-toggle"
+                        class="toggle-checkbox absolute block w-7 h-7 rounded-full bg-white border-4 appearance-none cursor-pointer"
+                    />
+                    <label
+                        for="pricing-toggle"
+                        class="toggle-label block overflow-hidden h-7 rounded-full bg-gray-300 cursor-pointer"
+                    ></label>
+                </div>
+                <span
+                    class="text-lg font-medium text-gray-500"
+                    id="yearly-label"
+                    >Năm
+                    <span
+                        class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2 py-1 rounded-full"
+                        >-15%</span
+                    ></span
+                >
+            </div>
+
+            <!-- Pricing Cards Section -->
+            <div class="mt-12">
+                <!-- Student & Family Plans -->
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">
+                    Dành cho Học sinh & Gia đình
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+                >
+                    <!-- Student Free -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Student Free
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">HS cá nhân</p>
+                        <div class="mt-4">
+                            <span class="text-4xl font-extrabold"
+                                >Miễn phí</span
+                            >
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Trải nghiệm cơ bản
+                        </p>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span
+                                    >Hỏi đáp Trợ giảng ảo (20 lượt/tuần)</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Học các khóa học có sẵn</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Làm bài trắc nghiệm cơ bản</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-colors"
+                        >
+                            Bắt đầu ngay
+                        </button>
+                    </div>
+
+                    <!-- Student Basic -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Student Basic
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">HS cá nhân</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="59000"
+                                data-yearly="607320"
+                                >59.000</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Học tập hiệu quả hơn
+                        </p>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span
+                                    >Hỏi đáp Trợ giảng ảo (200 lượt/tháng)</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Nhận xét chi tiết từ Bạn học ảo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Mở khóa toàn bộ bài trắc nghiệm</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Chọn gói Basic
+                        </button>
+                    </div>
+
+                    <!-- Student Pro -->
+                    <div
+                        class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col relative highlight-plan"
+                    >
+                        <span
+                            class="absolute top-0 right-6 -mt-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full"
+                            >PHỔ BIẾN</span
+                        >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Student Pro
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">HS cá nhân</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="149000"
+                                data-yearly="1532880"
+                                >149.000</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Tối ưu hóa tiềm năng
+                        </p>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>10 bài luận + 500 lượt hỏi/tháng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Lộ trình học cá nhân hóa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Phân tích năng lực & định hướng</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Chọn gói Pro
+                        </button>
+                    </div>
+
+                    <!-- Family Pack -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Family Pack
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">2-3 HS</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="299000"
+                                data-yearly="3074040"
+                                >299.000</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">
+                            Tiết kiệm cho cả nhà
+                        </p>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>30 bài luận + 1500 lượt hỏi/tháng</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tất cả tính năng của gói Pro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Báo cáo học tập cho phụ huynh</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Chọn gói Family
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Teacher & School Plans -->
+                <h2
+                    class="text-2xl font-bold text-center text-gray-800 mt-20 mb-8"
+                >
+                    Dành cho Giáo viên & Trường học
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+                >
+                    <!-- Teacher Basic -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Teacher Basic
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">GV cá nhân</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="199000"
+                                data-yearly="2047680"
+                                >199.000</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tạo 50 bài kiểm tra/tháng bằng AI</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tạo bài giảng & slide chuẩn BGD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Quản lý lớp học cơ bản</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Chọn gói Teacher
+                        </button>
+                    </div>
+
+                    <!-- Teacher Pro -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            Teacher Pro
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">GV cá nhân</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="399000"
+                                data-yearly="4095360"
+                                >399.000</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Không giới hạn tạo tài nguyên</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span
+                                    >Chấm bài & nhận xét theo phong cách
+                                    GV</span
+                                >
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tạo Trợ giảng ảo (bản sao cá nhân)</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Chọn gói Teacher Pro
+                        </button>
+                    </div>
+
+                    <!-- School Starter -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg p-6 flex flex-col border border-gray-200"
+                    >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            School Starter
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">≤50 HS, ≤10 GV</p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="2000000"
+                                data-yearly="20400000"
+                                >2 Tr</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>1000 lượt hỏi/tháng (chung)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Dashboard quản trị toàn diện</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Hỗ trợ Onboarding & Training</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Liên hệ tư vấn
+                        </button>
+                    </div>
+
+                    <!-- School Growth -->
+                    <div
+                        class="bg-white rounded-2xl shadow-2xl p-6 flex flex-col relative highlight-plan"
+                    >
+                        <span
+                            class="absolute top-0 right-6 -mt-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full"
+                            >CHO TRƯỜNG HỌC</span
+                        >
+                        <h3 class="text-xl font-bold text-gray-900">
+                            School Growth
+                        </h3>
+                        <p class="text-gray-500 mt-2 text-sm">
+                            ≤200 HS, ≤30 GV
+                        </p>
+                        <div class="mt-4">
+                            <span
+                                class="text-4xl font-extrabold price"
+                                data-monthly="5000000"
+                                data-yearly="51000000"
+                                >5 Tr</span
+                            >
+                            <span class="text-gray-500 font-medium price-period"
+                                >VND/tháng</span
+                            >
+                        </div>
+                        <ul class="mt-6 space-y-3 text-gray-600 flex-grow">
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>5000 lượt hỏi/tháng (chung)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tất cả tính năng Teacher Pro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg
+                                    class="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"
+                                    ></path></svg
+                                ><span>Tích hợp LMS/SSO & hỗ trợ ưu tiên</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full mt-8 py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                        >
+                            Liên hệ tư vấn
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Comparison Table -->
+            <div class="mt-20 max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+                    So Sánh Chi Tiết Tính Năng
+                </h2>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead
+                            class="text-xs text-gray-700 uppercase bg-gray-100"
+                        >
+                            <tr>
+                                <th scope="col" class="px-6 py-3 min-w-[250px]">
+                                    Chức Năng
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Student Free
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Student Basic
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Student Pro
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Teacher Pro
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    School Growth
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-gray-50">
+                                <td
+                                    colspan="6"
+                                    class="px-6 py-3 font-semibold text-gray-800"
+                                >
+                                    Dành cho Học sinh
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Hỏi đáp với Trợ giảng ảo
+                                </th>
+                                <td class="px-6 py-4 text-center">
+                                    ✓ (20/tuần)
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    ✓ (200/tháng)
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    ✓ (500/tháng)
+                                </td>
+                                <td class="px-6 py-4 text-center">✓</td>
+                                <td class="px-6 py-4 text-center">✓</td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Nhận xét chi tiết từ Bạn học ảo
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Chấm bài tự luận (AI)
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    ✓ (10 bài)
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Lộ trình học cá nhân hóa
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+
+                            <tr class="bg-gray-100">
+                                <td
+                                    colspan="6"
+                                    class="px-6 py-3 font-semibold text-gray-800"
+                                >
+                                    Dành cho Giáo viên & Tổ chức
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Tạo bài giảng & slide chuẩn BGD
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Chấm bài & nhận xét theo phong cách GV
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Tạo Trợ giảng ảo (bản sao cá nhân)
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Tạo mô hình 3D & game tương tác
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Dashboard quản trị & báo cáo
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <th
+                                    scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                                >
+                                    Báo cáo cho phụ huynh
+                                </th>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td class="px-6 py-4 text-center text-gray-400">
+                                    -
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                                <td
+                                    class="px-6 py-4 text-center text-green-500 font-bold"
+                                >
+                                    ✓
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.getElementById("pricing-toggle");
+                const prices = document.querySelectorAll(".price");
+                const pricePeriods = document.querySelectorAll(".price-period");
+                const monthlyLabel = document.getElementById("monthly-label");
+                const yearlyLabel = document.getElementById("yearly-label");
+
+                // Function to format number with dots
+                function formatCurrency(num) {
+                    if (num >= 1000000) {
+                        return (num / 1000000).toLocaleString("vi-VN") + " Tr";
+                    }
+                    return num.toLocaleString("vi-VN");
+                }
+
+                // Function to update prices based on toggle state
+                function updatePrices() {
+                    const isYearly = toggle.checked;
+
+                    if (isYearly) {
+                        monthlyLabel.classList.remove("text-gray-700");
+                        monthlyLabel.classList.add("text-gray-500");
+                        yearlyLabel.classList.remove("text-gray-500");
+                        yearlyLabel.classList.add("text-gray-700");
+                    } else {
+                        yearlyLabel.classList.remove("text-gray-700");
+                        yearlyLabel.classList.add("text-gray-500");
+                        monthlyLabel.classList.remove("text-gray-500");
+                        monthlyLabel.classList.add("text-gray-700");
+                    }
+
+                    prices.forEach((priceEl) => {
+                        const monthlyPrice = parseInt(
+                            priceEl.dataset.monthly,
+                            10
+                        );
+                        const yearlyPrice = parseInt(
+                            priceEl.dataset.yearly,
+                            10
+                        );
+
+                        if (isYearly) {
+                            priceEl.textContent = formatCurrency(yearlyPrice);
+                        } else {
+                            priceEl.textContent = formatCurrency(monthlyPrice);
+                        }
+                    });
+
+                    pricePeriods.forEach((periodEl) => {
+                        if (isYearly) {
+                            periodEl.textContent = "VND/năm";
+                        } else {
+                            periodEl.textContent = "VND/tháng";
+                        }
+                    });
+                }
+
+                // Event listener for the toggle
+                toggle.addEventListener("change", updatePrices);
+
+                // Initial call to set the correct prices on page load
+                updatePrices();
+            });
+        </script>
+    </body>
+</html>
